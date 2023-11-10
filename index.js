@@ -3,9 +3,13 @@ const jsonData = require('./json')
 
 const http = require("http")
 http.createServer((req, res)=>{
-    const file = {name: "Rishi", age: 23, course: "MERN", batch: "EA25"}
+    // const file = {name: "Rishi", age: 23, course: "MERN", batch: "EA25"}
     if(req.url === '/'){
         res.write("<h1>This is my HTTP Server</h1>")
+        res.write("<h2>What is Node Js?</h2>")
+        res.write("Node is an open source, cross-platform, JavaScript runtime environment built on Chrome's V8 JS engine that executes js code outside web-browser.")
+        res.write("<h3>Advantages:</h3>")
+        res.write("<ul><li>Fast-processing for web-tasks.</li><li>Robust technology stack.</li><li>Rich ecosystem</li><li>Seamless JSON support.</li><li>Scalable technology for microservices.</li><li>Large developer community.</li><li> Performance bottlenecks with heavy computation tasks.</li></ul>")
         res.end()
     }
     else if(req.url === '/about'){
